@@ -1,4 +1,6 @@
 Sogaeting::Application.routes.draw do
+  resources :winks
+
   resources :users
 
   get "home/splash"

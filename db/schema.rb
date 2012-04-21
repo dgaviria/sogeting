@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120421174752) do
+ActiveRecord::Schema.define(:version => 20120421214224) do
 
   create_table "users", :force => true do |t|
     t.integer  "facebook_id"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(:version => 20120421174752) do
     t.string   "relationship_status"
     t.string   "religion"
     t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "winks", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.integer  "match_id"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
