@@ -6,8 +6,8 @@
 	<div class="span3">
 		<%= gravatar_for user %>
 	</div>
-	<div class="span2" style="left:-20px;">
-		<div><%= link_to user.f_name + ' ' + user.l_name, user %></div>
+	<div class="span2" style="left:-40px; position:relative; width:120px;">
+		<div><b><%= link_to user.f_name + ' ' + user.l_name, user %></b></div>
 		<div><%= user.bio %></div>
 	</div>
   </div>
@@ -15,5 +15,4 @@
 <% end %>
 
 <br />
-
-<%= link_to 'New User', new_user_path %>
+</div>
