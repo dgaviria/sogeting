@@ -2,11 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.4'
 
+gem 'thin'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :test, :development do
   gem 'sqlite3'
+  gem 'foreman'
 end
 
 group :production do
