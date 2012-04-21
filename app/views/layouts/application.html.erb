@@ -10,21 +10,28 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="container-fluid">
-        <h3><%= link_to "Sogaeting", "/" %></h3>
-        <ul class="nav">
-          <li><%= link_to "Link1", "/path1"  %></li>
-          <li><%= link_to "Link2", "/path2"  %></li>
-          <li><%= link_to "Link3", "/path3"  %></li>
-        </ul>
+        <h3><%= link_to "Wink & Link", "/" %></h3>
+        <ul class="nav" style="float:right">
+          <li><%= link_to "Profile", "/path1"  %></li>
+          <li><%= link_to "Logout", "/path2"  %></li>
+       </ul>
       </div>
     </div>
   </div>
   <div class="container-fluid">
     <div class="sidebar">
       <div class="well">
-        <h5>Sidebar</h5>
         <ul>
           <li><%= link_to "Users", users_path  %></li>
+        </ul>
+      </div>
+	  
+	  <div class="well">
+	  	<h5>Sorting Preferences</h5>
+        <ul>
+          <li>Preference 1</li>
+          <li>Preference 2</li>
+          <li>Preference 3</li>
         </ul>
       </div>
     </div>
