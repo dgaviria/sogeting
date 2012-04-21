@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+
+<h1>
+	<%= gravatar_for @user %>
+	<%= @user.f_name %>
+</h1>
+
+
+<!--
+
 <p>
   <b>Facebook:</b>
   <%= @user.facebook_id %>
@@ -94,6 +103,8 @@
   <b>Website:</b>
   <%= @user.website %>
 </p>
+
+-->
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
