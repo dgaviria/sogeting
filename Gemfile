@@ -46,3 +46,5 @@ group :test do
 end
 
 gem "twitter-bootstrap-rails"
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.5'

@@ -1,6 +1,8 @@
 <h1>Browse Friends</h1>
 
 
+<%= will_paginate %>
+
 <% @users.each do |user| %>
   <div class="row" style="float:left">
 	<div class="span3">
@@ -14,6 +16,10 @@
 
 <% end %>
 
+<%= will_paginate %>
+
 <br />
+<br />
+
 
 <%= link_to 'New User', new_user_path %>
