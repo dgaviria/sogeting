@@ -1,11 +1,11 @@
 Sogaeting::Application.routes.draw do
   resources :users
 
-  get "home/index"
+  get "home/splash"
 
   get "home/about"
   
-  root :to => 'home#index'
+  root :to => 'home#splash'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
