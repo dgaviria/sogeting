@@ -3,31 +3,10 @@
 
 <h1>
 	<%= gravatar_for @user %>
-	<%= @user.f_name %>
+	<%= @user.f_name + " " + @user.l_name %>
 </h1>
 
 
-<!--
-
-<p>
-  <b>Facebook:</b>
-  <%= @user.facebook_id %>
-</p>
-
-<p>
-  <b>F name:</b>
-  <%= @user.f_name %>
-</p>
-
-<p>
-  <b>M name:</b>
-  <%= @user.m_name %>
-</p>
-
-<p>
-  <b>L name:</b>
-  <%= @user.l_name %>
-</p>
 
 <p>
   <b>Gender:</b>
@@ -104,7 +83,7 @@
   <%= @user.website %>
 </p>
 
--->
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
