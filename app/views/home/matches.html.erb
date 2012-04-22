@@ -1,12 +1,11 @@
 <h1>Your Recommended Matches</h1>
 
-<% user1 = User.find(2) %>
-<% user2 = User.find(5) %>
-<% user3 = User.find(8) %>
-<% user4 = User.find(9) %>
-<% user5 = User.find(12) %>
-<% user6 = User.find(14) %>
-<% @newUsers = [user1, user2, user3, user4, user5, user6] %>
+<% me = User.find(30) %>
+<% match1 = User.find(5) %>
+<% friend1 = User.find(18) %>
+<% match2 = User.find(12) %>
+<% friend2 = User.find(14) %>
+<% #@newUsers = [user1, user2, user3, user4, user5, user6] %>
 
 <h3>
 <div class="row">
@@ -22,20 +21,20 @@
 
 <div class="row" style="float:left">
 	<div class="span3">
-		<%= linkImage user2 %>
+		<%= linkImage match1 %>
 	</div>
 	<div class="span2" style="left:-40px; position:relative; width:120px;">
-		<div><b><%= link_to user2.f_name + ' ' + user2.l_name, user2 %></b></div>
-		<div><%= user2.bio %></div>
+		<div><b><%= link_to match1.f_name + ' ' + match1.l_name, match1 %></b></div>
+		<div><%= match1.bio %></div>
 	</div>
 </div>
 
 <div class="row" style="float:left">
 	<div class="span2">
-		<%= linkImage user3 %>
+		<%= linkImage friend1 %>
 	</div>
 	<div style="text-align:center;">
-	<b><%= link_to user3.f_name , user3 %></b>
+	<b><%= link_to friend1.f_name , friend1 %></b>
 	</div>
 </div>
 <div class="row" style="float:left">
@@ -43,9 +42,9 @@
 <div>
 	<% @wink = Wink.new %>
 	<%= form_for(@wink) do |w| %>
-		<%= w.hidden_field :user_id, :value => user1.id %>
-		<%= w.hidden_field :friend_id, :value => user2.id %>
-		<%= w.hidden_field :match_id, :value => user3.id %>
+		<%= w.hidden_field :user_id, :value => me.id %>
+		<%= w.hidden_field :friend_id, :value => friend1.id %>
+		<%= w.hidden_field :match_id, :value => match1.id %>
 		<%= w.hidden_field :status, :value => "pending" %>
 		
 		<%= w.submit "Introduce Me!", class: "btn warning large primary" %>
@@ -58,20 +57,20 @@
 
 <div class="row" style="float:left">
 	<div class="span3">
-		<%= linkImage user4 %>
+		<%= linkImage match2 %>
 	</div>
 	<div class="span2" style="left:-40px; position:relative; width:120px;">
-		<div><b><%= link_to user6.f_name + ' ' + user6.l_name, user6 %></b></div>
-		<div><%= user6.bio %></div>
+		<div><b><%= link_to match2.f_name + ' ' + match2.l_name, match2 %></b></div>
+		<div><%= match2.bio %></div>
 	</div>
 </div>
 
 <div class="row" style="float:left">
 	<div class="span2">
-		<%= linkImage user5 %>
+		<%= linkImage friend2 %>
 	</div>
 	<div style="text-align:center;">
-	<b><%= link_to user5.f_name , user5 %></b>
+	<b><%= link_to friend2.f_name , friend2 %></b>
 	</div>
 </div>
 
@@ -80,9 +79,9 @@
 <div>
 	<% @wink = Wink.new %>
 	<%= form_for(@wink) do |w| %>
-		<%= w.hidden_field :user_id, :value => user5.id %>
-		<%= w.hidden_field :friend_id, :value => user4.id %>
-		<%= w.hidden_field :match_id, :value => user6.id %>
+		<%= w.hidden_field :user_id, :value => me.id %>
+		<%= w.hidden_field :friend_id, :value => friend2.id %>
+		<%= w.hidden_field :match_id, :value => match2.id %>
 		<%= w.hidden_field :status, :value => "pending" %>
 		
 		<%= w.submit "Introduce Me!", class: "btn warning large primary" %>
