@@ -6,11 +6,11 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="padding-top: 60px">
+<body style="padding-top: 70px">
   <div class="topbar">
     <div class="topbar-inner">
       <div class="container-fluid">
-        <h3><%= link_to "Wink & Link", "/" %></h3>
+        <h3><%= link_to image_tag("wink_logo.png", :class => "brand"), "/" %></h3>
         <ul class="nav" style="float:right">
           <li><%= link_to "Profile", ""  %></li>
           <li><%= link_to "Logout", ""  %></li>

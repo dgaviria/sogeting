@@ -1,5 +1,5 @@
 @import "twitter/bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
 
 // Baseline grid
 @basefont:          13px;
@@ -9,7 +9,12 @@
 @lightblue:			#9DDCF9;
 @lighterblue:		#D4EFFC;
 @orange:			#F7931D;
-@header-font:		"Lobster";
+@header-font:		"Raleway";
+
+body	{
+	background: url("tile.jpg");
+	background-repeat: repeat;
+}
 
 h1 {
 	font-family: @header-font;
@@ -18,21 +23,23 @@ h1 {
 
 .topbar, .topbar-inner {
 	background: @darkblue;
+	height: 55px;
 		h3 a { padding: 0px;
 			img.brand{
-			padding: 3px 0px 3px 40px;}
+			padding: 8px 0px 3px 40px;}
 		}
-		div ul a {
-			padding: 12px 12px 12px;
-			color:white;
-			}
+	div ul a {
+		padding: 18px 12px 12px;
+		color:white;
+			&hover { background-color: none; }
+		}
 	}
 	
 
 a { text-decoration: none;
-	padding: 0px;
-	&:hover { background-color: none; }
-	}
+	padding: 0px; }
+	&hover { background-color: none; }
+	
 
 .well {
 	ul {
