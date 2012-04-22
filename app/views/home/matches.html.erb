@@ -54,3 +54,40 @@
 <div class="row">
 	
 </div>
+
+
+
+<div class="row" style="float:left">
+	<div class="span3">
+		<%= gravatar_for user4 %>
+	</div>
+	<div class="span2" style="left:-40px; position:relative; width:120px;">
+		<div><b><%= link_to user6.f_name + ' ' + user6.l_name, user6 %></b></div>
+		<div><%= user6.bio %></div>
+	</div>
+</div>
+
+<div class="row" style="float:left">
+	<div class="span2">
+		<%= gravatar_for_profile user5 %>
+	</div>
+	<div style="text-align:center;">
+	<b><%= link_to user5.f_name , user5 %></b>
+	</div>
+	<div style="padding-left:12%;">
+	<% @wink = Wink.new %>
+	<%= form_for(@wink) do |w| %>
+		<%= w.hidden_field :user_id, :value => user5.id %>
+		<%= w.hidden_field :friend_id, :value => user4.id %>
+		<%= w.hidden_field :match_id, :value => user6.id %>
+		<%= w.hidden_field :status, :value => "pending" %>
+		
+		<%= w.submit "Wink!", class: "btn warning small primary" %>
+	<% end %>
+
+	</div>
+</div>
+
+<div class="row">
+	
+</div>
