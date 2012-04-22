@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sogaeting</title>
+  <title>Wink & Link</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -22,7 +22,7 @@
     <div class="sidebar">
       <div class="well">
         <ul style="list-style-type: none">
-          <li><%= link_to "Matches", ""  %></li>
+          <li><%= link_to "Matches", "/matches"  %></li>
           <li><%= link_to "My Winks", winks_path  %></li>
           <li><%= link_to "Browse Network", users_path  %></li>
         </ul>

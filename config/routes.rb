@@ -1,11 +1,16 @@
 Sogaeting::Application.routes.draw do
   resources :winks
-
+  
   resources :users
-
-  get "home/splash"
-
+  
+  get "home/matches"
   get "home/about"
+  get "home/splash"
+  
+  match '/matches', to: 'home#matches'
+  match '/about', to: 'home#about'
+  
+  match '/dowink', to: 'winks#new'
   
   root :to => 'home#splash'
 

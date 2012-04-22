@@ -1,0 +1,56 @@
+<h1>See your Matches</h1>
+
+<% user1 = User.find(1) %>
+<% user2 = User.find(5) %>
+<% user3 = User.find(8) %>
+<% user4 = User.find(9) %>
+<% user5 = User.find(12) %>
+<% user6 = User.find(14) %>
+<% @newUsers = [user1, user2, user3, user4, user5, user6] %>
+
+<h3>
+<div class="row">
+	<div class="span1"></div>
+	<div class="span6">
+		Your Match
+	</div>
+	<div class="span6">
+		Your Friend
+	</div>
+</div>
+</h3>
+
+<div class="row" style="float:left">
+	<div class="span3">
+		<%= gravatar_for user2 %>
+	</div>
+	<div class="span2" style="left:-40px; position:relative; width:120px;">
+		<div><b><%= link_to user2.f_name + ' ' + user2.l_name, user2 %></b></div>
+		<div><%= user2.bio %></div>
+	</div>
+</div>
+
+<div class="row" style="float:left">
+	<div class="span3">
+		<%= gravatar_for_profile user3 %>
+	</div>
+	<div class="span2" style="left:-40px; position:relative; width:70px;">
+		<div><b><%= link_to user3.f_name + ' ' + user3.l_name, user3 %></b></div>
+		<div><%= user3.bio %></div>
+	</div>
+</div>
+
+<div class="row">
+	<% @wink = Wink.new %>
+	<%= form_for(@wink) do |w| %>
+		<% #hidden_field(:user_id, user1.id) %>
+		<%= w.label :user_id %>:
+	  	<%= w.text_field :user_id %><br />
+		<% hidden_field(:friend_id, user3.id) %>
+		<% hidden_field(:match_id, user2.id) %>
+		<% hidden_field(:status, :value => "pending") %>
+		
+		<%= w.submit "Wink!", class: "btn large primary" %>
+	<% end %>
+	<%# link_to "Wink!", dowink_path, class: "btn large primary" %>
+</div>
