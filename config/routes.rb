@@ -10,8 +10,6 @@ Sogaeting::Application.routes.draw do
   match '/matches', to: 'home#matches'
   match '/about', to: 'home#about'
   
-  match '/dowink', to: 'winks#new'
-  
   root :to => 'home#splash'
 
   # The priority is based upon order of creation:

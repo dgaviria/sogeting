@@ -6,7 +6,7 @@
 <% @users.each do |user| %>
   <div class="row" style="float:left">
 	<div class="span3">
-		<%= gravatar_for user %>
+		<%= linkImage user %>
 	</div>
 	<div class="span2" style="left:-40px; position:relative; width:120px;">
 		<div><b><%= link_to user.f_name + ' ' + user.l_name, user %></b></div>
