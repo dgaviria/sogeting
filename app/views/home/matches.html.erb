@@ -43,10 +43,10 @@
 <div class="row">
 	<% @wink = Wink.new %>
 	<%= form_for(@wink) do |w| %>
-		<% w.hidden_field :user_id, :input_html => { :value => user1.id } %>
-		<% w.hidden_field :friend_id, :input_html => { :value => user3.id } %>
-		<% w.hidden_field :match_id, :input_html => { :value => user2.id } %>
-		<% w.hidden_field :status, :input_html => { :value => "pending" } %>
+		<%= w.hidden_field :user_id, :value => user1.id %>
+		<%= w.hidden_field :friend_id, :value => user3.id %>
+		<%= w.hidden_field :match_id, :value => user2.id %>
+		<%= w.hidden_field :status, :value => "pending" %>
 		
 		<%= w.submit "Wink!", class: "btn large primary" %>
 	<% end %>
