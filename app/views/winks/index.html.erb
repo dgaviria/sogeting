@@ -2,28 +2,36 @@
 
 <table>
   <tr>
-    <th>User</th>
     <th>Friend</th>
+	<th></th>
     <th>Match</th>
+	<th></th>
     <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @winks.each do |wink| %>
+
+<% user1 = User.find(wink.friend_id) %>
+<% user2 = User.find(wink.match_id) %>
+
   <tr>
-    <td><%= wink.user_id %></td>
-    <td><%= wink.friend_id %></td>
-    <td><%= wink.match_id %></td>
-    <td><%= wink.status %></td>
-    <td><%= link_to 'Show', wink %></td>
-    <td><%= link_to 'Edit', edit_wink_path(wink) %></td>
-    <td><%= link_to 'Destroy', wink, confirm: 'Are you sure?', method: :delete %></td>
+    <td style="width:128px;"><%= gravatar_for user1 %></td>
+	<td style="width:200px;">
+	<div>
+	<b><%= user1.f_name %></b><br/>
+	<%= user1.bio %>
+	</div>
+	</td>
+    <td style="width:128px;"><%= gravatar_for user2 %></td>
+	<td style="width:200px;">
+	<div>
+	<b><%= user2.f_name %></b><br/>
+	<%= user2.bio %>
+	</div>
+	</td>
+    <td><span style="font-size:14px;" class="label <%= get_status wink.status %>"><%= wink.status %></span></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Wink', new_wink_path %>
