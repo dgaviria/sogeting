@@ -15,7 +15,7 @@
 		Matches
 	</div>
 	<div class="span6">
-		Matched Through
+		Linked Through
 	</div>
 </div>
 </h3>
@@ -37,25 +37,24 @@
 	<div style="text-align:center;">
 	<b><%= link_to user3.f_name , user3 %></b>
 	</div>
-	<div style="padding-left:12%;">
+</div>
+<div class="row" style="float:left">
+<div class="span16" style="border-bottom: 1px solid #999">
+<div>
 	<% @wink = Wink.new %>
 	<%= form_for(@wink) do |w| %>
-		<%= w.hidden_field :user_id, :value => user1.id %>
-		<%= w.hidden_field :friend_id, :value => user3.id %>
-		<%= w.hidden_field :match_id, :value => user2.id %>
+		<%= w.hidden_field :user_id, :value => user5.id %>
+		<%= w.hidden_field :friend_id, :value => user4.id %>
+		<%= w.hidden_field :match_id, :value => user6.id %>
 		<%= w.hidden_field :status, :value => "pending" %>
 		
-		<%= w.submit "Wink!", class: "btn warning small primary" %>
+		<%= w.submit "Introduce Me!", class: "btn warning large primary" %>
+		<%= w.submit "Not Now!", class: "btn btn-warning warning large" %>
 	<% end %>
-
+	
+	</div>
 	</div>
 </div>
-
-<div class="row">
-	
-</div>
-
-
 
 <div class="row" style="float:left">
 	<div class="span3">
@@ -74,7 +73,11 @@
 	<div style="text-align:center;">
 	<b><%= link_to user5.f_name , user5 %></b>
 	</div>
-	<div style="padding-left:12%;">
+</div>
+
+<div class="row" style="float:left">
+<div class="span16">
+<div>
 	<% @wink = Wink.new %>
 	<%= form_for(@wink) do |w| %>
 		<%= w.hidden_field :user_id, :value => user5.id %>
@@ -82,12 +85,12 @@
 		<%= w.hidden_field :match_id, :value => user6.id %>
 		<%= w.hidden_field :status, :value => "pending" %>
 		
-		<%= w.submit "Wink!", class: "btn warning small primary" %>
+		<%= w.submit "Introduce Me!", class: "btn warning large primary" %>
+		<%= w.submit "Not Now!", class: "btn btn-warning warning large" %>
 	<% end %>
-
+	
+	</div>
 	</div>
 </div>
 
-<div class="row">
-	
-</div>
+
