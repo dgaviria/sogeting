@@ -11,11 +11,11 @@
 <h3>
 <div class="row">
 	<div class="span1"></div>
-	<div class="span6">
-		Your Match
+	<div class="span5">
+		Matches
 	</div>
 	<div class="span6">
-		Your Friend
+		Matched Through
 	</div>
 </div>
 </h3>
@@ -31,16 +31,13 @@
 </div>
 
 <div class="row" style="float:left">
-	<div class="span3">
+	<div class="span2">
 		<%= gravatar_for_profile user3 %>
 	</div>
-	<div class="span2" style="left:-40px; position:relative; width:70px;">
-		<div><b><%= link_to user3.f_name + ' ' + user3.l_name, user3 %></b></div>
-		<div><%= user3.bio %></div>
+	<div style="text-align:center;">
+	<b><%= link_to user3.f_name , user3 %></b>
 	</div>
-</div>
-
-<div class="row">
+	<div style="padding-left:12%;">
 	<% @wink = Wink.new %>
 	<%= form_for(@wink) do |w| %>
 		<%= w.hidden_field :user_id, :value => user1.id %>
@@ -48,7 +45,12 @@
 		<%= w.hidden_field :match_id, :value => user2.id %>
 		<%= w.hidden_field :status, :value => "pending" %>
 		
-		<%= w.submit "Wink!", class: "btn large primary" %>
+		<%= w.submit "Wink!", class: "btn warning small primary" %>
 	<% end %>
-	<%# link_to "Wink!", dowink_path, class: "btn large primary" %>
+
+	</div>
+</div>
+
+<div class="row">
+	
 </div>
