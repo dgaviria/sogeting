@@ -44,8 +44,9 @@ class WinksController < ApplicationController
 	
 	@friend = @wink.friend_id
 	@tosendEmail = User.find(@friend)
+	@match = User.find(@wink.match_id)
 	
-	MyMailer.wink_email(@tosendEmail).deliver
+	MyMailer.wink_email(@tosendEmail, @match).deliver
 	
     respond_to do |format|
       if @wink.save

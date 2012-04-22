@@ -4,13 +4,13 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Introduction request, <%= @user.f_name %> is requesting your introduction</h1>
+    <h1><%= @user.f_name %> wants to meet <%= @match.f_name %>, do you approve?</h1>
     <p>
       Log into WinkAndLink.co to approve the request.<br/>
     </p>
     <p>
       To login to the site, just follow this link: <%= @url %>.
     </p>
-    <p>Thanks for bringing two people together!</p>
+    <p>Help bring your friends together!</p>
   </body>
 </html>
