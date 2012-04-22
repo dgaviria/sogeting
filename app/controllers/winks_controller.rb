@@ -25,7 +25,7 @@ class WinksController < ApplicationController
   # GET /winks/new.json
   def new
     @wink = Wink.new
-
+	
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @wink }
@@ -41,6 +41,12 @@ class WinksController < ApplicationController
   # POST /winks.json
   def create
     @wink = Wink.new(params[:wink])
+	
+	@friend = @wink.friend_id
+	@tosendEmail = User.find(@friend)
+	
+	MyMailer.wink_email(@tosendEmail).deliver
+	
     respond_to do |format|
       if @wink.save
         format.html { redirect_to @wink, notice: 'Wink was successfully created.' }
