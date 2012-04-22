@@ -4,6 +4,9 @@ gem 'rails', '3.1.4'
 
 gem 'thin'
 
+gem 'neoid'
+
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -49,3 +52,5 @@ group :test do
 end
 
 gem "twitter-bootstrap-rails"
+#gem 'neo4j', '1.2.0', :git => 'git://github.com/andreasronge/neo4j.git'
+
