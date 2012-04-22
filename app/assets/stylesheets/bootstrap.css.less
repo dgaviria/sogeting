@@ -1,5 +1,51 @@
 @import "twitter/bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 // Baseline grid
 @basefont:          13px;
 @baseline:          18px;
+@base-color:		lightblue;
+@darkblue:			#009EDB;
+@lightblue:			#9DDCF9;
+@lighterblue:		#D4EFFC;
+@orange:			#F7931D;
+@header-font:		"Lobster";
+
+h1 {
+	font-family: @header-font;
+	font-size: 20px;
+	}
+
+.topbar, .topbar-inner {
+	background: @darkblue;
+		h3 a { padding: 0px;
+			img.brand{
+			padding: 3px 0px 3px 40px;}
+		}
+		div ul a {
+			padding: 12px 12px 12px;
+			color:white;
+			}
+	}
+	
+
+a { text-decoration: none;
+	padding: 0px;
+	&:hover { background-color: none; }
+	}
+
+.well {
+	ul {
+		li {
+		font-size: 14px;
+		line-height: 2em;
+			a { text-decoration:none;
+				&:hover { background-color:none; }
+			}
+		}
+	}
+}
+
+.row {
+	margin-bottom: 30px;
+	}
