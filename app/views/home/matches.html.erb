@@ -1,6 +1,6 @@
 <h1>Your Recommended Matches</h1>
 
-<% user1 = User.find(1) %>
+<% user1 = User.find(2) %>
 <% user2 = User.find(5) %>
 <% user3 = User.find(8) %>
 <% user4 = User.find(9) %>
@@ -43,9 +43,9 @@
 <div>
 	<% @wink = Wink.new %>
 	<%= form_for(@wink) do |w| %>
-		<%= w.hidden_field :user_id, :value => user5.id %>
-		<%= w.hidden_field :friend_id, :value => user4.id %>
-		<%= w.hidden_field :match_id, :value => user6.id %>
+		<%= w.hidden_field :user_id, :value => user1.id %>
+		<%= w.hidden_field :friend_id, :value => user2.id %>
+		<%= w.hidden_field :match_id, :value => user3.id %>
 		<%= w.hidden_field :status, :value => "pending" %>
 		
 		<%= w.submit "Introduce Me!", class: "btn warning large primary" %>
