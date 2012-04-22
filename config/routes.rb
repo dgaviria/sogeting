@@ -1,4 +1,6 @@
 Sogaeting::Application.routes.draw do
+  resources :connections
+
   resources :users
 
   get "home/index"

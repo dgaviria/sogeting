@@ -11,8 +11,8 @@
 
 <% @connections.each do |connection| %>
   <tr>
-    <td><%= connection.user_a %></td>
-    <td><%= connection.user_b %></td>
+    <td><%= connection.user_a_id %></td>
+    <td><%= connection.user_b_id %></td>
     <td><%= link_to 'Show', connection %></td>
     <td><%= link_to 'Edit', edit_connection_path(connection) %></td>
     <td><%= link_to 'Destroy', connection, confirm: 'Are you sure?', method: :delete %></td>
