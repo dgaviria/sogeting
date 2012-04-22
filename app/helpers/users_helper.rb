@@ -24,7 +24,7 @@ module UsersHelper
   end
   
   def linkImage(user)
-    image_tag(""+user.id.to_s+".jpg", alt: user.f_name)
+    image_tag(""+user.facebook_id.to_s+".jpg", alt: user.f_name)
   end
   
   def find_user(id1)

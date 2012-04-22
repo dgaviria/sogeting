@@ -42,11 +42,11 @@ class WinksController < ApplicationController
   def create
     @wink = Wink.new(params[:wink])
 	
-	@friend = @wink.friend_id
-	@tosendEmail = User.find(@friend)
+	@friend = User.find(@wink.friend_id)
 	@match = User.find(@wink.match_id)
+	@me = User.find(@wink.user_id)
 	
-	MyMailer.wink_email(@tosendEmail, @match).deliver
+	MyMailer.wink_email(@friend, @match, @me).deliver
 	
     respond_to do |format|
       if @wink.save

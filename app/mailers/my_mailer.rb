@@ -7,11 +7,13 @@ class MyMailer < ActionMailer::Base
     mail(:to => user.email, :subject => "Welcome to Wink!")
   end
   
-  def wink_email(user, match)
-     @user = user
+  def wink_email(friend, match, me)
+     @friend = friend
 	 @match = match
+	 @me = me
+	 
    	 @url  = "http://winkandlink.co"
-     mail(:to => user.email, :subject => "Introduction request!", :from => "intro@winkandlink.co")
+     mail(:to => friend.email, :subject => "Introduction request!", :from => "intro@winkandlink.co")
   end
   
 end
