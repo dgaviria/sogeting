@@ -48,7 +48,7 @@
 	  	<%= w.text_field :user_id %><br />
 		<% hidden_field(:friend_id, user3.id) %>
 		<% hidden_field(:match_id, user2.id) %>
-		<% hidden_field(:status, :value => "pending") %>
+		<% hidden_field(:status, value: "pending") %>
 		
 		<%= w.submit "Wink!", class: "btn large primary" %>
 	<% end %>

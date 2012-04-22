@@ -41,7 +41,6 @@ class WinksController < ApplicationController
   # POST /winks.json
   def create
     @wink = Wink.new(params[:wink])
-
     respond_to do |format|
       if @wink.save
         format.html { redirect_to @wink, notice: 'Wink was successfully created.' }
