@@ -18,6 +18,12 @@ module UsersHelper
     image_tag(gravatar_url, alt: user.f_name, class: "gravatar")
   end
   
+  def gravatar_for2(user)
+    gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
+    gravatar_url = "http://gravatar.com/avatar/#{gravatar_id}.jpg?s=96"
+    image_tag(gravatar_url, alt: user.f_name, class: "gravatar")
+  end
+  
   def find_user(id1)
        User.find(id1)
   end
